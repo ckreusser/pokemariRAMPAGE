@@ -11,7 +11,7 @@ Katamari Damaci Clone - Pokemari Cannabalasi
 It solves the problem of what happens when you consume too many miniature versions of yourself.
 
 ## Who has this problem?
-All the bored people!.
+All the bored people!
 
 ## How will your project solve this problem?
 It will be either mildly or wildly entertaining.
@@ -46,7 +46,7 @@ Duck Hunt - PokePEW
 It solves the problem of how best to destroy tasty, flying Pokemon
 
 ## Who has this problem?
-All the bored people!.
+All the bored people!
 
 ## How will your project solve this problem?
 It will be either mildly or wildly entertaining.
