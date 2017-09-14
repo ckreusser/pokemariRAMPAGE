@@ -16,8 +16,10 @@ BasicGame.Game.prototype = {
     this.enemyDelay = 10;
   },
 
+
   checkCollisions: function() {
     this.physics.arcade.collide(this.player, this.enemyPool, this.enemyHit, null, this);
+
   },
 
   spawnEnemies: function() {
@@ -27,6 +29,9 @@ BasicGame.Game.prototype = {
       enemy.reset(this.rnd.integerInRange(20, this.game.width - 20), 0);
       enemy.body.velocity.y = this.rnd.integerInRange(50, 90);
       enemy.play('walk');
+      // console.log(this.enemyPool);
+      // this.enemyPool.scale.x = (Math.random() * (3-1) + 1).toFixed(2);
+      // this.enemyPool.scale.y = (Math.random() * (3-1) + 1).toFixed(2);
     }
   },
 
@@ -49,6 +54,7 @@ BasicGame.Game.prototype = {
       this.player.body.velocity.y = this.player.speed;
       this.player.animations.play('down');
     }
+
 
     if (this.input.activePointer.isDown) {
       if (this.returnText && this.returnText.exists) {
@@ -82,7 +88,6 @@ BasicGame.Game.prototype = {
   setupPlayer: function() {
     this.player = this.add.sprite(this.game.width / 2, this.game.height - 50, 'player');
     this.player.scale.setTo(1, 1);
-    // var growthpoints = this.player.scale;
     this.player.anchor.setTo(0.5, 0.5);
     this.player.animations.add('left', [4, 5, 6, 7], 10, true);
     this.player.animations.add('right', [8, 9, 10, 11], 10, true);
@@ -91,7 +96,7 @@ BasicGame.Game.prototype = {
     this.physics.enable(this.player, Phaser.Physics.ARCADE);
     this.player.speed = 300;
     this.player.body.collideWorldBounds = true;
-    this.player.body.setSize(20, 20, 0, 10);
+    this.player.body.setSize(20, 20, 10, 30);
   },
 
   setupEnemies: function() {
@@ -147,9 +152,9 @@ BasicGame.Game.prototype = {
   },
 
   enemyHit: function(player, enemy) {
-    // console.log('grow');
+    this.player.scale.x += 0.025
+    this.player.scale.y += 0.025
     this.explode(enemy);
-    // this.grow(player);
     enemy.kill();
     this.addToScore(enemy.reward);
   },
@@ -163,7 +168,7 @@ BasicGame.Game.prototype = {
   addToScore: function(score) {
     this.score += score;
     this.scoreText.text = this.score;
-      if (this.score >= 3000) {
+      if (this.score >= 35000) {
         this.enemyPool.destroy();
         this.displayEnd(true);
       }
@@ -183,22 +188,16 @@ BasicGame.Game.prototype = {
     var explosion = this.explosionPool.getFirstExists(false);
     explosion.reset(sprite.x, sprite.y);
     explosion.play('boom', 15, false, true);
+    explosion.scale.setTo(1.5, 1.5);
     explosion.body.velocity.x = sprite.body.velocity.x;
     explosion.body.velocity.y = sprite.body.velocity.y;
   },
-
-  // grow: function(player, growthpoints) {
-  //         console.log('grow');
-  //   this.player.scale = this.player.scale + (this.player.scale * growthpoints);
-  //   this.player.size.x = this.player.size.x + (this.player.scale * growthpoints);
-  //   this.player.size.y = this.player.size.y + (this.player.scale * growthpoints);
-  // },
 
   displayEnd: function(win) {
     if (this.endText && this.endText.exists) {
       return;
     }
-    var msg = win ? 'DELICIOUS VICTORY!!!' : 'Game Over!';
+    var msg = win ? 'COLOSSAL CONQUEST!' : 'Game Over!';
     this.endText = this.add.text(
       this.game.width / 2, this.game.height / 2 - 60, msg,
       { font: '72px impact', fill: '#fff' }
