@@ -81,10 +81,12 @@ BasicGame.Game.prototype = {
 
   setupPlayer: function() {
     this.player = this.add.sprite(this.game.width / 2, this.game.height - 50, 'player');
+    this.player.scale.setTo(1, 1);
+    // var growthpoints = this.player.scale;
     this.player.anchor.setTo(0.5, 0.5);
     this.player.animations.add('left', [4, 5, 6, 7], 10, true);
     this.player.animations.add('right', [8, 9, 10, 11], 10, true);
-    this.player.animations.add('down', [0, 1, 2, 3], 10, true);
+    this.player.animations.add('down', [3, 2, 1, 0], 10, true);
     this.player.animations.add('up', [12, 13, 14, 15], 10, true);
     this.physics.enable(this.player, Phaser.Physics.ARCADE);
     this.player.speed = 300;

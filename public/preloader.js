@@ -11,11 +11,11 @@ BasicGame.Preloader = function (game) {
 BasicGame.Preloader.prototype = {
 
   preload: function () {
-    this.load.image('titlepage', 'assets/titlepage.png');
-    this.load.image('grass', 'assets/grass.jpg');
-    this.load.spritesheet('player', 'assets/Pikachu.png', 64, 64);
-    this.load.spritesheet('enemy', 'assets/Ash Trainer.gif', 32, 32);
-    this.load.spritesheet('explosion', 'assets/Blood1.png', 70, 70);
+    this.load.image('titlepage', 'titlepage.png');
+    this.load.image('grass', 'grass.jpg');
+    this.load.spritesheet('player', 'Pikachu.png', 64, 64);
+    this.load.spritesheet('enemy', 'Ash Trainer.gif', 32, 32);
+    this.load.spritesheet('explosion', 'Blood1.png', 70, 70);
 
     //  Show the loading progress bar asset we loaded in boot.js
     this.stage.backgroundColor = '#2d2d2d';
