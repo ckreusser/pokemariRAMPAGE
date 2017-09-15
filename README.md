@@ -15,7 +15,7 @@ I used a quote generator API to generate words of wisdom before, during, and aft
 - Achieve Colossal Conquest
 
 Take control of an angry Pika hell-bent on revenge.
-[[https://github.com/ckreusser/repository/q1-project-proposals/blob/master/]]
+[[https://github.com/ckreusser/repository/q1-project-proposals/blob/master/Action%20Shot.jpg]]
 
 Wipe out hoards of multiverse trainers in their hunt for their former “pet.”
 
