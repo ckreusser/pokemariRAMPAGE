@@ -18,6 +18,8 @@ Take control of an angry Pika hell-bent on revenge.
 
 [https://github.com/ckreusser/repository/q1-project-proposals/blob/master/Action%20Shot.jpg]
 
+![Alt text](ckreusser/repository/q1-project-proposals/blob/master/Action%20Shot.jpg?raw=true "Optional Title")
+
 Wipe out hoards of multiverse trainers in their hunt for their former “pet.”
 
 They’re about to find out that the line between Pocket Monster and Man is much thinner than they planned…
