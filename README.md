@@ -88,7 +88,7 @@ I used a quote generator API to generate words of wisdom before, during, and aft
 - Achieve Colossal Conquest
 
 Take control of an angry Pika hell-bent on revenge.
-<blockquote class="imgur-embed-pub" lang="en" data-id="fFXYh1I"><a href="//imgur.com/fFXYh1I">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![alt text](https://imgur.com/fFXYh1I)
 
 Wipe out hoards of multiverse trainers in their hunt for their former “pet.”
 
